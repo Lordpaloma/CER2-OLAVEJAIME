@@ -9,8 +9,6 @@ def home(request):
 def correspondencia(request):
     busqueda = request.GET.get("buscar")
     correspondencias = Correspondencia.objects.all()
-    res = (Correspondencia.direccion)
-    print(res)
     if busqueda:
         correspondencias = Correspondencia.objects.filter(
             Q(direccion = busqueda)
