@@ -1,0 +1,46 @@
+{% extends 'appcer2/base.html' %}
+{%load static%}
+
+{% block content %}
+
+<div>
+    <div id = "busqueda" class="container">
+        <form class="d-flex" method="get">
+            <input class="form-control me-2" type="search" placeholder="escriba numero de casa" name="buscar">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+    </div>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Direccion</th>
+                <th scope="col">Fecha de entrega</th>
+                <th scope="col">Conserje</th>
+                <th scope="col">Destinatario</th>
+                <th scope="col">Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+        {%if corres%}
+        {%for corre in corres%}
+        <tr>
+            <td>{{corre.direccion}}</td>
+            <td>{{corre.fecha_entrega}}</td>
+            <td>{{corre.Conserje}}</td>
+            <td>{{corre.destinatario}}</td>
+            {%if corre.entregado == True%}
+            <td>Entregado</td>
+            {%else%}
+            <td>No entregado</td>
+            {%endif%}
+        </tr>
+        {%endfor%}
+        {%else%}
+            <h1>no hay registros de correspondencia</h1>
+        {%endif%}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

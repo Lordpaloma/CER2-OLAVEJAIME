@@ -1,0 +1,14 @@
+#body {
+    background-color: lightgray;
+}
+
+#header {
+    background-color: slategrey;
+}
+
+#boton {
+    text-align: center;
+    background-color: slategrey;
+    margin: auto;
+    opacity: 90%;
+}

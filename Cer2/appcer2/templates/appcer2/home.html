@@ -1,0 +1,23 @@
+
+{%  extends 'appcer2/base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="Saludo">
+        <div class="container overflow-hidden text-center">
+            <div class="row gx-5">
+                <div class="col">
+                    <div class="p-3">
+                        <img src="{% static 'appcer2/img/reparto-ultima-milla.jpg' %}" alt="" width="300" height="300">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3">
+                        <h1 class="display-4"> Bienvenido/a </h1>
+                        <p>Nos encargamos de que tus paquetes lleguen seguros a tu casa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
